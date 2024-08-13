@@ -1,0 +1,139 @@
+.data {
+    background-image: url('pulsar-wallpaper-2400x1350.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the image */
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.data1 {
+    background-image: url('nasa1.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the image */
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.typing-container {
+    font-family: 'Courier New', Courier, monospace;
+    white-space: normal; /* Allow text to wrap naturally */
+    overflow: hidden; /* Hide overflow text during typing */
+    padding: 20px;
+    color: white; /* Text color for better visibility */
+    max-width: 800px; /* Limit the width for readability */
+    text-align: left; /* Align text to the left */
+    position: relative; /* Allow positioning of cursor */
+}
+
+h2 {
+    font-size: 2.5rem; /* Increase the font size of headings */
+}
+
+p {
+    font-size: 1.5rem; /* Increase the font size of paragraphs */
+    line-height: 1.6; /* Increase line spacing for better readability */
+}
+
+.typing-container::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+.marquee-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%; /* Adjust height as needed */
+    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background */
+}
+
+.marquee-content {
+    position: absolute;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+    color: white; /* Text color */
+    padding: 10px; /* Adjust padding as needed */
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.sliding-window {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.slide h2 {
+    margin: 0;
+}
+
+.slide p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+    padding: 20px;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.nav-icon {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a background color for visibility */
+    border-radius: 50%; /* Optional: Make buttons round */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for better appearance */
+}
+
+.nav-icon:hover {
+    opacity: 0.8; /* Optional: Add hover effect */
+}
+
